@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Dev Board</title>
 </head>
-<body>
-    dev board
+
+<body class="p-10">
+    <header class="m-10">
+        <nav class="navbar rounded-xl p-5 bg-white justify-center content-cente">
+            <div class="flex-1">
+                <img class="inline w-10 h-10" src="/images/logo.png" alt="">
+                <a class="text-2xl">Dev <span class="font-bold">Board</span></a>
+            </div>
+            <div class="flex gap-x-5">
+                <div class="themeColor px-2 align-middle rounded-xl">
+                    <img class="inline" src="/images/checkbox.png" alt="">
+                    <span id="taskCompletionCount" class="text-2xl font-bold">23</span>
+                </div>
+                <div id="themeBtn" class="align-middle p-3 themeColor rounded-full">
+                    <img src="/images/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="/scripts/themes.js"></script>
 </body>
+
 </html>
