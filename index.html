@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
+    <style>
+        * {
+            font-family: "Poppins";
+        }
+    </style>
     <title>Dev Board</title>
 </head>
 
-<body class="p-10">
-    <header class="p-10">
-        <nav class="navbar rounded-xl p-5 bg-white justify-center items-cente">
-            <div class="flex-1">
+<body class="p-5 themeColor">
+    <header class="p-5">
+        <nav class="rounded-xl p-5 bg-white flex justify-between items-center">
+            <div class="flex gap-1 justify-between items-center">
                 <img class="inline w-10 h-10" src="/images/logo.png" alt="">
-                <a class="text-3xl">Dev <span class="font-bold">Board</span></a>
+                <a class="text-4xl">Dev<span class="font-bold">Board</span></a>
             </div>
             <div class="flex gap-x-5">
                 <div class="themeColor p-2 rounded-xl m-auto flex justify-center items-center">
@@ -27,48 +32,145 @@
         </nav>
     </header>
 
-    <main class="px-10">
-        <div class="grid grid-cols-4 justify-between gap-3">
-            <section class="bg-white rounded-2xl col-span-3">
-                <div class="grid grid-cols-4 gap-x-2 justify-around items-center p-5">
-                    <div class="themeColor p-3 rounded-xl flex justify-center items-center gap-x-2">
-                        <img src="/images/checkbox.png" class="bg-white p-3 rounded-2xl w-14 h-14 ">
+    <main class="px-5">
+        <div class="grid grid-cols-5 justify-between gap-3">
+            <section class="bg-white rounded-lg col-span-4">
+                <div class="grid grid-cols-7 gap-3 p-5">
+                    <div class="themeColor col-span-2 p-2 rounded-xl flex items-center">
+                        <img src="/images/checkbox.png" class="bg-white p-2 mr-1 rounded-lg">
                         <div class="">
-                            <p class="text-nowrap">Task Assigned</p>
+                            <p class="font-bold text-xl text-slate-700">Task Assigned</p>
                             <p class="text-3xl font-bold" id="taskCount">05</p>
                         </div>
                     </div>
-                    <div
-                        class="col-span-2 p-3 pl-3 flex items-center gap-x-4 bg-linear-to-r from-blue-600 to-blue-300 rounded-xl">
-                        <img src="/images/board.png" class="w-14 h-14" alt="">
-                        <p class="text-white">Discover Something <br> New Today!</p>
+                    <div class="col-span-3 flex p-2 items-center bg-linear-to-r from-blue-600 to-blue-300 rounded-xl">
+                        <img src="/images/board.png" class="" alt="">
+                        <p class="text-white text-xl">Discover Something <br> New Today!</p>
                     </div>
-                    <div class="themeColor p-3 rounded-xl flex justify-center items-center gap-x-2">
-                        <img src="/images/calender.png" class="bg-white p-3 rounded-2xl w-14 h-14">
-                        <div class="">
-                            <p class="text-nowrap">Task Assigned</p>
-                            <p class="text-3xl font-bold" id="tashCount">05</p>
+                    <div class="themeColor col-span-2 p-2 rounded-xl flex items-center">
+                        <img src="/images/calender.png" class="bg-white p-2 mr-1 rounded-lg">
+                        <div class="font-bold text-xl">
+                            <p id="taskDay" class="text-slate-700"></p>
+                            <p id="taskDate"></p>
                         </div>
                     </div>
                 </div>
-                <div class="mb-5 border-y border-dashed border-stone-400 w-full"></div>
-                <div class="h-10 p-5">
-                    f
+                <div class="mb-5 border border-dashed border-stone-200 w-full"></div>
+
+                <div class="grid grid-cols-3 gap-3 justify-around m-5 themeColor bg-white">
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">ShopEase</p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Fix Mobile Button Issue</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">
+                            Debug using Chrome DevTools, check
+                            for overlapping elements, and ensure onClick works properly and ensure onClick works
+                            properly</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">CloudSync</p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Add Dark Mode</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">SwiftPay</p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Optimize Home Page</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">
+                            Debug using Chrome DevTools, check
+                            for overlapping elements, and ensure onClick works properly and ensure onClick works
+                            properly</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Meta</p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Add New Emoji🙌</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">
+                            Debug using Chrome DevTools, check
+                            for overlapping elements, and ensure onClick works properly and ensure onClick works
+                            properly</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Google LLC<p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Integrate OpenAI API</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">
+                            Debug using Chrome DevTools, check
+                            for overlapping elements, and ensure onClick works properly and ensure onClick works
+                            properly</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
+                    <div class="p-2 themeColor rounded-lg">
+                        <div class="flex">
+                            <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Glassdorr</p>
+                        </div>
+                        <p class="text-2xl font-bold p-1 title">Improve Job Searching</p>
+                        <p class="overflowText p-2 bg-white rounded-lg cursor-pointer text-slate-700 line-clamp-2">
+                            Debug using Chrome DevTools, check
+                            for overlapping elements, and ensure onClick works properly and ensure onClick works
+                            properly</p>
+                        <div class="flex justify-between items-center">
+                            <div class="p-2">
+                                <p class="text-slate-800">Deadline</p>
+                                <p class="">21 March 25</p>
+                            </div>
+                            <button class="completedBtn btnClasses">Completed</button>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="bg-white rounded-2xl">
-                <div class="p-5">
+            <section id="activityHistory" class="bg-white rounded-lg">
+                <div class="p-2">
                     <div class="flex justify-center items-center gap-x-2 mb-3">
                         <img src="/images/activity.png" alt="" class="w-5 h-5">
                         <p class="text-xl">Activity Log</p>
                     </div>
                     <div class="flex justify-center">
-                        <button class="btn btn-primary" id="clearHistory">Clear History</button>
+                        <button class="btnClasses" id="clearHistory">Clear History</button>
                     </div>
                 </div>
-                <div class="mb-5 border-y border-dashed border-stone-400 w-full"></div>
+                <div class="mb-5 border-y border-dashed border-stone-200 w-full"></div>
             </section>
-        </div>
     </main>
 
     <footer>
@@ -76,6 +178,10 @@
     </footer>
 
     <script src="/scripts/themes.js"></script>
+    <script src="/scripts/date.js"></script>
+    <script src="/scripts/overflow.js"></script>
+    <script src="/scripts/utility.js"></script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>

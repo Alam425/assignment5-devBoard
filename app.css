@@ -1,2 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@layer components {
+  .btnClasses {
+    @apply border border-gray-400 bg-blue-500 p-2 text-gray-200 rounded-2xl;
+  }
+}
