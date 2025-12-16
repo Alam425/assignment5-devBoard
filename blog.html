@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <style>
+        * {
+            font-family: "Poppins";
+        }
+    </style>
+    <title>Blogs</title>
+</head>
+
+<body class="p-5 themeColor text-slate-800">
+    <header class="p-5">
+        <nav class="shadow-lg rounded-xl p-5 bg-white flex justify-between items-center">
+            <div class="flex gap-1 justify-between items-center">
+                <img class="inline w-10 h-10" src="/images/logo.png" alt="">
+                <a class="text-4xl">Dev<span class="font-bold">Board</span></a>
+            </div>
+            <div class="flex gap-x-5">
+                <button id="backToDesk"
+                    class="text-2xl font-bold rounded-lg bg-indigo-400 px-5 cursor-pointer py-3">Back To
+                    Desk</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="uppercase">
+        <h1 class="text-4xl my-2 font-bold text-center">Blog</h1>
+        <section class="mx-5 drop-shadow-2xl bg-white">
+            <div class="py-3 px-5">
+                <h4 class="text-xl font-bold">Question-1: What are the different ways to select
+                    an element in the DOM?</h4>
+                <h6 class="text-lg px-5 line normal-case">=> There are some methods to do it. Ex.- document.getElementByTagName(), document.getElementById(), document.getElementByClassName(), document.querySelector(), document.querySelectorAll() etc.</h6>
+            </div>
+            <div class="py-3 px-5">
+                <h4 class="text-xl font-bold">Question-2: What is the difference between innerHTML, innerText, and
+                    textContent ?</h4>
+                <h6 class="text-lg px-5 line leading-snug normal-case">=> innerHTML gives the whole of the html. innerText gives the text inside an element only. textContent gives the text but also the hidden ones.</h6>
+            </div>
+            <div class="py-3 px-5">
+                <h4 class="text-xl font-bold">Question-3: What is event delegation in the DOM?</h4>
+                <h6 class="text-lg px-5 line leading-snug normal-case">=> If any event(click, hover, mouseenter etc.) occurs in any childNode, it need to be captured. Then, it needs to be bubbled up to the parent to do something to it. This is DOM Event Delegation.</h6>
+            </div>
+            <div class="py-3 px-5">
+                <h4 class="text-xl font-bold">Question-4: What is event bubbling in the DOM?</h4>
+                <h6 class="text-lg px-5 line leading-snug normal-case">=> After capturing an event, it is sent to the parent. This is called event bubbling.</h6>
+            </div>
+            <div class="py-3 px-5">
+                <h4 class="text-xl font-bold">Question-5: How do you create, add, and remove elements using
+                    JavaScript?</h4>
+                <h6 class="text-lg px-5 line leading-snug normal-case">=> You can create any element by document.createElement() method, add any element by document.appendChild() method, remove any element by document.removeChild() method.</h6>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/blog.js"></script>
+</body>
+
+</html>

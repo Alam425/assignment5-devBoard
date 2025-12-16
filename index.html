@@ -14,40 +14,40 @@
 </head>
 
 <body class="p-5 themeColor">
-    <header class="p-5">
-        <nav class="rounded-xl p-5 bg-white flex justify-between items-center">
+    <header class="p-5 pt-0">
+        <nav class="shadow-lg rounded-xl p-5 bg-white flex justify-between items-center">
             <div class="flex gap-1 justify-between items-center">
                 <img class="inline w-10 h-10" src="/images/logo.png" alt="">
                 <a class="text-4xl">Dev<span class="font-bold">Board</span></a>
             </div>
             <div class="flex gap-x-5">
-                <div class="themeColor p-2 rounded-xl m-auto flex justify-center items-center">
+                <div class="bg-slate-100 p-2 rounded-xl m-auto flex justify-center items-center">
                     <img class="w-full h-full m-auto mr-1" src="/images/checkbox.png" alt="">
                     <p id="taskCompletionCount" class="text-3xl font-bold">23</p>
                 </div>
-                <div id="themeBtn" class="p-3 themeColor rounded-full">
+                <div id="themeBtn" class="p-3 bg-slate-100 rounded-full">
                     <img src="/images/theme-btn.png" alt="">
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="px-5">
+    <main class="mx-5 shadow-lg">
         <div class="grid grid-cols-5 justify-between gap-3">
             <section class="bg-white rounded-lg col-span-4">
                 <div class="grid grid-cols-7 gap-3 p-5">
-                    <div class="themeColor col-span-2 p-2 rounded-xl flex items-center">
+                    <div class="bg-slate-100 col-span-2 p-2 rounded-xl flex items-center">
                         <img src="/images/checkbox.png" class="bg-white p-2 mr-1 rounded-lg">
                         <div class="">
                             <p class="font-bold text-xl text-slate-700">Task Assigned</p>
-                            <p class="text-3xl font-bold" id="taskCount">05</p>
+                            <p class="text-3xl font-bold" id="taskCount">06</p>
                         </div>
                     </div>
-                    <div class="col-span-3 flex p-2 items-center bg-linear-to-r from-blue-600 to-blue-300 rounded-xl">
+                    <div id="discover" class="col-span-3 flex p-2 items-center bg-linear-to-r from-blue-600 to-blue-300 rounded-xl">
                         <img src="/images/board.png" class="" alt="">
                         <p class="text-white text-xl">Discover Something <br> New Today!</p>
                     </div>
-                    <div class="themeColor col-span-2 p-2 rounded-xl flex items-center">
+                    <div class="bg-slate-100 col-span-2 p-2 rounded-xl flex items-center">
                         <img src="/images/calender.png" class="bg-white p-2 mr-1 rounded-lg">
                         <div class="font-bold text-xl">
                             <p id="taskDay" class="text-slate-700"></p>
@@ -57,8 +57,8 @@
                 </div>
                 <div class="mb-5 border border-dashed border-stone-200 w-full"></div>
 
-                <div class="grid grid-cols-3 gap-3 justify-around m-5 themeColor bg-white">
-                    <div class="p-2 themeColor rounded-lg">
+                <div class="grid grid-cols-3 gap-3 justify-around m-5 bg-slate-100 bg-white">
+                    <div class="p-2 bg-slate-100 rounded-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">ShopEase</p>
                         </div>
@@ -72,10 +72,10 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn btnClasses">Completed</button>
                         </div>
                     </div>
-                    <div class="p-2 themeColor rounded-lg">
+                    <div class="p-2 bg-slate-100 rounded-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">CloudSync</p>
                         </div>
@@ -86,10 +86,10 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn btnClasses">Completed</button>
                         </div>
                     </div>
-                    <div class="p-2 themeColor rounded-lg">
+                    <div class="p-2 bg-slate-100 round bg-m-m-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">SwiftPay</p>
                         </div>
@@ -103,10 +103,10 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn bg-m btnClasses">Completed</button>
                         </div>
                     </div>
-                    <div class="p-2 themeColor rounded-lg">
+                    <div class="p-2 bg-slate-100 rounded-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Meta</p>
                         </div>
@@ -120,10 +120,10 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn bg-m btnClasses">Completed</button>
                         </div>
                     </div>
-                    <div class="p-2 themeColor rounded-lg">
+                    <div class="p-2 bg-slate-100 rounded-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Google LLC<p>
                         </div>
@@ -137,10 +137,10 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn bg-m btnClasses">Completed</button>
                         </div>
                     </div>
-                    <div class="p-2 themeColor rounded-lg">
+                    <div class="p-2 bg-slate-100 rounded-lg">
                         <div class="flex">
                             <p class="px-2 py-1 rounded-lg border border-neutral-400 bg-white">Glassdorr</p>
                         </div>
@@ -154,7 +154,7 @@
                                 <p class="text-slate-800">Deadline</p>
                                 <p class="">21 March 25</p>
                             </div>
-                            <button class="completedBtn btnClasses">Completed</button>
+                            <button type="button" class="completedBtn btnClasses">Completed</button>
                         </div>
                     </div>
                 </div>
